@@ -1,0 +1,9 @@
+#
+# Aeronavics specific message for sending config commands to IWR1843 radar module
+#
+
+uint8[<256] data
+
+---
+
+uint8[<64] response
