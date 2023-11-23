@@ -6,4 +6,9 @@ uint8[<256] data
 
 ---
 
-uint8[<64] response
+uint3 STATUS_SUCCESS      = 0
+uint3 STATUS_FAILED       = 1
+uint3 STATUS_SKIPPED      = 2
+uint3 STATUS_UNRECOGNISED = 3
+
+uint3 status
