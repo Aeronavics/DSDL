@@ -40,3 +40,4 @@ uint16    LOWEROIL_ALARM             = 0x04       # 2 - Abnormal low oil level
 uint16    MAINTIME_ALARM             = 0x02       # 1 - Maintenance time expiration alarm
 uint16    LOCKTIME_ALARM             = 0x01       # 0 - Alarm for expiration of lock time
 uint16    ExtenderAlarm                            # Alarm signal
+uint16    total_run_minutes                        # total_run_minutes
