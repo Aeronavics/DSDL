@@ -1,21 +1,21 @@
 #
-#Node status information of the range extender system controller
-#Sending node: the range extender system controller
-#Message type ID: 20251 (0x4F1B)
+# Node status information of the range extender system controller
+# Sending node: the range extender system controller
+# Message type ID: 20251 (0x4F1B)
 #
 #
-#Message release cycle (50ms)
+# Message release cycle (50ms)
 #
 uint16 BROADCASTING_PERIOD_MS = 50  # Sending cycle 50ms
 
 #
 # Message signal
 #
-uint16   EngineSpeed                                   # engine speed, unit:rpm; accuracy£º1; rangge:0~20000; Offset:0
-uint16   ThrottlePosition                              # Throttle opening value, unit:%; accuracy£º0.1; rangge:0~100; Offset:0
-uint8    FuelPosition                                  # Oil level, unit:%; accuracy£º0.5; rangge:0~100; Offset:0
-uint8    Motortemperature                     	       # Motort emperature, unit: degree, rangge£º-40~210 degree; Offset:-40 degree
-uint8    EngineCylinderTemperature                     # Engine temperature, unit: degree, rangge£º-40~215 degree; Offset:-40 degree
+uint16   EngineSpeed                                   # engine speed, unit:rpm; accuracy:1; range:0~20000; Offset:0
+uint16   ThrottlePosition                              # Throttle opening value, unit:%; accuracy:0.1; range:0~100; Offset:0
+uint8    FuelPosition                                  # Fuel level, unit:%; accuracy:0.5; range:0~100; Offset:0
+uint8    Motortemperature                     	       # Motort emperature, unit: degree celsius, range:-40~210 degrees celsius; Offset:-40 degrees celsius
+uint8    EngineCylinderTemperature                     # Engine temperature, unit: degree celsius, range:-40~215 degrees celsius; Offset:-40 degrees celsius
 
 uint8    EXTENDER_WORKING_STATE_STOP          = 0      # 0 - stop 
 uint8    EXTENDER_WORKING_STATE_CRANK         = 1      # 1 - cranking
@@ -24,20 +24,21 @@ uint8    EXTENDER_WORKING_STATE_LOCK          = 3      # 3 - locked
 uint8    EXTENDER_WORKING_STATE_INHIBIT       = 4      # 4 - inhibit starting
 uint8    WorkingState                                  # Engine working status(0~4)
 
-uint16   OutputVoltage                                 # output voltage  unit:V; accuracy£º0.2; rangge:0~100; Offset:0
-uint16   OutputCurrent                                 # Output Current  unit:A; accuracy£º0.2; rangge:-200~200; Offset:-1000
+uint16   OutputVoltage                                 # output voltage  unit:V; accuracy:0.2; range:0~100; Offset:0
+uint16   OutputCurrent                                 # Output Current  unit:A; accuracy:0.2; range:-200~200; Offset:-1000
 
-uint16    VOUT_OV_ALARM             = 0x8000      # 15 - Abnormal high system voltage output
-uint16    VOUT_LV_ALARM             = 0x4000      # 14 - Abnormal low system voltage output
-uint16    IOUT_OA_ALARM             = 0x2000      # 13 - System current overcurrent abnormality
-uint16    OV_SPEED_ALARM            = 0x1000      # 12 - Abnormal high rotational speed
-uint16    THROTTLE_OPEN_ALARM       = 0x200       # 9 - Abnormal throttle opening
-uint16    OVER_TEMPCOOL_ALARM        = 0x80       # 7 - Abnormal coolant temperature
-uint16    OVER_TEMPCOIL_ALARM        = 0x40       # 6 - Abnormal temperature of motor coil
-uint16    BUS_COMMUN_ALARM        = 0x10       # 4 - System bus communication abnormality
-uint16    SYSTEMRUN_ALARM            = 0x08       # 3 - System running abnormally
-uint16    LOWEROIL_ALARM             = 0x04       # 2 - Abnormal low oil level
-uint16    MAINTIME_ALARM             = 0x02       # 1 - Maintenance time expiration alarm
-uint16    LOCKTIME_ALARM             = 0x01       # 0 - Alarm for expiration of lock time
-uint16    ExtenderAlarm                            # Alarm signal
-uint16    total_run_minutes                        # total_run_minutes
+uint16    VOUT_OV_ALARM             = 0x8000           # 15 - Abnormal high system voltage output
+uint16    VOUT_LV_ALARM             = 0x4000           # 14 - Abnormal low system voltage output
+uint16    IOUT_OA_ALARM             = 0x2000           # 13 - System current overcurrent abnormality
+uint16    OV_SPEED_ALARM            = 0x1000           # 12 - Abnormal high rotational speed
+uint16    THROTTLE_OPEN_ALARM       = 0x200            # 9 - Abnormal throttle opening
+uint16    OVER_TEMPCOOL_ALARM       = 0x80             # 7 - Abnormal coolant temperature
+uint16    OVER_TEMPCOIL_ALARM       = 0x40             # 6 - Abnormal temperature of motor coil
+uint16    BUS_COMMUN_ALARM          = 0x10             # 4 - System bus communication abnormality
+uint16    SYSTEMRUN_ALARM           = 0x08             # 3 - System running abnormally
+uint16    LOWEROIL_ALARM            = 0x04             # 2 - Abnormal low oil level
+uint16    MAINTIME_ALARM            = 0x02             # 1 - Maintenance time expiration alarm
+uint16    LOCKTIME_ALARM            = 0x01             # 0 - Alarm for expiration of lock time
+uint16    ExtenderAlarm                                # Alarm signal
+
+uint16    total_run_minutes                            # total_run_minutes
