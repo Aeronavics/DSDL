@@ -1,0 +1,16 @@
+#
+#   Spray controller control message
+#
+
+float16 flow_rate       # Current flow rate 
+float16 pressure        # Pressure in the spray pipes
+float16 spray_remaining # Percentage of spray remaining
+
+uint8 ERROR_FLOW_RATE_1     = 1     # bit 0: Nozzle 1 has a flow rate error
+uint8 ERROR_FLOW_RATE_2     = 2     # bit 1: Nozzle 2 has a flow rate error
+uint8 ERROR_FLOW_RATE_3     = 4     # bit 2: Nozzle 3 has a flow rate error
+uint8 ERROR_FLOW_RATE_4     = 8     # bit 3: Nozzle 4 has a flow rate error
+uint8 ERROR_LOW_PRESSURE    = 16    # bit 4: Low pressure detected in spray system
+uint8 ERROR_OVER_PRESSURE   = 32    # bit 5: Over pressure detected in spray system
+uint8 ERROR_NO_SPRAY        = 64    # bit 6: No spray remaining or error with the spray measurement system
+uint8 error_flags

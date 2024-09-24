@@ -1,0 +1,5 @@
+#
+#   Spray controller control message
+#
+
+float16 flow_rate   # spray flow rate
