@@ -2,4 +2,5 @@
 #   Spray controller control message
 #
 
-float16 flow_rate   # spray flow rate
+uint16 flow_rate   # ml/s   Target spray flow rate
+uint16 pressure    # kpa    Target spray system pressure

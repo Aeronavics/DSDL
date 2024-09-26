@@ -2,9 +2,9 @@
 #   Spray controller control message
 #
 
-float16 flow_rate       # Current flow rate 
-float16 pressure        # Pressure in the spray pipes
-float16 spray_remaining # Percentage of spray remaining
+uint16  flow_rate       # ml/s  Current flow rate
+uint16  pressure        # kpa   Pressure in the spray pipes
+float16 spray_remaining # %     Percentage of spray remaining
 
 uint8 ERROR_FLOW_RATE_1     = 1     # bit 0: Nozzle 1 has a flow rate error
 uint8 ERROR_FLOW_RATE_2     = 2     # bit 1: Nozzle 2 has a flow rate error
