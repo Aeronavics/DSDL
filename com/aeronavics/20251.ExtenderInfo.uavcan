@@ -11,11 +11,13 @@ uint16 BROADCASTING_PERIOD_MS = 50  # Sending cycle 50ms
 #
 # Message signal
 #
-uint16   EngineSpeed                                   # engine speed, unit:rpm; accuracy:1; range:0~20000; Offset:0
-uint16   ThrottlePosition                              # Throttle opening value, unit:%; accuracy:0.1; range:0~100; Offset:0
-uint8    FuelPosition                                  # Fuel level, unit:%; accuracy:0.5; range:0~100; Offset:0
-uint8    Motortemperature                     	       # Motort emperature, unit: degree celsius, range:-40~210 degrees celsius; Offset:-40 degrees celsius
-uint8    EngineCylinderTemperature                     # Engine temperature, unit: degree celsius, range:-40~215 degrees celsius; Offset:-40 degrees celsius
+uint16   EngineSpeed                                   # Engine Speed,              unit:rpm;               accuracy:1;     range:0~20000;                  Offset:0
+uint16   ThrottlePosition                              # Throttle Opening Value,    unit:%;                 accuracy:0.1;   range:0~100;                    Offset:0
+uint8    FuelPosition                                  # Fuel Level,                unit:%;                 accuracy:0.5;   range:0~100;                    Offset:0
+uint8    Motortemperature                     	       # Motor Temperature,         unit: degree celsius;   accuracy:1;     range:-40~210 degrees celsius;  Offset:-40 degrees celsius
+uint8    EngineCylinderTemperature                     # Engine Temperature,        unit: degree celsius;   accuracy:1;     range:-40~215 degrees celsius;  Offset:-40 degrees celsius
+uint16   OutputVoltage                                 # output Voltage,            unit:V;                 accuracy:0.2;   range:0~100;                    Offset:0
+uint16   OutputCurrent                                 # Output Current,            unit:A;                 accuracy:0.2;   range:-200~200;                 Offset:-1000
 
 uint8    EXTENDER_WORKING_STATE_STOP          = 0      # 0 - stop 
 uint8    EXTENDER_WORKING_STATE_CRANK         = 1      # 1 - cranking
@@ -23,9 +25,6 @@ uint8    EXTENDER_WORKING_STATE_RUN           = 2      # 2 - running
 uint8    EXTENDER_WORKING_STATE_LOCK          = 3      # 3 - locked
 uint8    EXTENDER_WORKING_STATE_INHIBIT       = 4      # 4 - inhibit starting
 uint8    WorkingState                                  # Engine working status(0~4)
-
-uint16   OutputVoltage                                 # output voltage  unit:V; accuracy:0.2; range:0~100; Offset:0
-uint16   OutputCurrent                                 # Output Current  unit:A; accuracy:0.2; range:-200~200; Offset:-1000
 
 uint16    VOUT_OV_ALARM             = 0x8000           # 15 - Abnormal high system voltage output
 uint16    VOUT_LV_ALARM             = 0x4000           # 14 - Abnormal low system voltage output
