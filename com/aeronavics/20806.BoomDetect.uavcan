@@ -1,0 +1,6 @@
+#
+#   Booms status message
+#
+
+bool booms_connected
+
