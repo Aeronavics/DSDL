@@ -1,0 +1,2 @@
+uint10 cmd  # cmd, range 0~1023
+uint6 node_id # node_id, range 0~63

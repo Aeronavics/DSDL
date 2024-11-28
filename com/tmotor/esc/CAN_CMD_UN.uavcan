@@ -1,0 +1,4 @@
+
+uint16 all
+
+CAN_CMD_BITS bits
