@@ -6,6 +6,8 @@ uint16  flow_rate       # ml/s  Current flow rate
 uint16  pressure        # kpa   Pressure in the spray pipes
 float16 spray_remaining # %     Percentage of spray remaining
 float16 tank_weight     # kg    Weight of the payload tanks
+float16 sprayed_volume  # l		Litres sprayed since last arm
+
 
 uint8 ERROR_FLOW_RATE_1     = 1     # bit 0: Nozzle 1 has a flow rate error
 uint8 ERROR_FLOW_RATE_2     = 2     # bit 1: Nozzle 2 has a flow rate error
