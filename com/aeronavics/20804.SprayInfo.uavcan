@@ -2,11 +2,13 @@
 #   Spray controller control message
 #
 
-uint16  flow_rate       # ml/s  Current flow rate
-uint16  pressure        # kpa   Pressure in the spray pipes
-float16 spray_remaining # %     Percentage of spray remaining
-float16 tank_weight     # kg    Weight of the payload tanks
-float16 sprayed_volume  # l		Litres sprayed since last arm
+uint16  flow_rate       	# ml/s  Current flow rate
+uint16  pressure        	# kpa   Pressure in the spray pipes
+float16 spray_remaining 	# %     Percentage of spray remaining
+float16 tank_weight     	# kg    Weight of the payload tanks
+float16 armed_sprayed_vol  	# l	Litres sprayed since last arm
+float16 total_sprayed_vol	# l	Litres sprayed since last powercycle
+float16 last_tree_vol		# l 	Litres sprayed on last tree
 
 
 uint8 ERROR_FLOW_RATE_1     = 1     # bit 0: Nozzle 1 has a flow rate error
