@@ -1,0 +1,73 @@
+#
+#Node status information of the range extender system controller
+#Sending node: the range extender system controller
+#Message type ID: 20251 (0x4F1B)
+#
+#
+#Message release cycle (50ms)
+#
+uint16 BROADCASTING_PERIOD_MS = 50  # Sending cycle 50ms
+
+#
+# Message signal
+#
+
+uint8    MOTORCONTROL                         = 0x01 # $1E8
+uint8    MOTORRESPONSE                        = 0x02
+
+# uint8    CONTROLCMD_STOP                      = 0   # 00 - stop 
+uint8    CONTROLCMD_RUNCAN                      = 0x10   # RUN - CAN
+uint8    CONTROLCMD_RUNCOM                      = 0x20   # RUN - COM
+uint8    CONTROLCMD_RUNREMOTE                      = 0x30   # RUN - REMOTE
+
+# uint8    EXTENDER_WORKING_STATE_STOP          = 0x00      # 00 - stop 
+uint8    EXTENDER_WORKING_STATE_CRANK         = 0x40      # 01 - cranking
+uint8    EXTENDER_WORKING_STATE_IDLE         = 0x80      # 10 - IDLE
+uint8    EXTENDER_WORKING_STATE_RUN           = 0xc0      # 11 - running
+uint8    WorkingState                                  # Engine working status(0~4) 
+
+uint8     ECT1						# Engine coolant temperature 1 Engine temperature, unit: degree, rangge -40~215 degree; Offset:-40 degree
+uint8     ECT2						# Engine coolant temperature 2 Engine temperature, unit: degree, rangge -40~215 degree; Offset:-40 degree
+uint8     GWT						# Temperature of motor coil Motort emperature, unit: degree, rangge -40~210 degree; Offset:-40 degree
+
+uint16   EngineSpeed                                   # engine speed, unit:rpm; accuracy 1; rangge:0~20000; Offset:0  1E9
+uint16   OutputVoltage                                 # output voltage  unit:V; accuracy 0.01; rangge:0~100; Offset:0
+uint16   OutputCurrent                                 # Output Current  unit:A; accuracy 0.05; rangge:-400~400; Offset:-400
+uint16   BatteryCurrent                                 # Output Current  unit:A; accuracy 0.05; rangge:-400~400; Offset:-400
+
+uint16   TargetTP1                                     # $1EA Target throttle position 1 Throttle opening value, unit:%; accuracy 0.05; rangge:0~100; Offset:0
+uint16   ActualTP1                                     # Target throttle position 1 unit:%; accuracy 0.05; rangge:0~100; Offset:0
+uint8   BARO                                           # 
+uint8   IAT                                            # unit: degree, rangge -40~210 degree; Offset:-40 
+
+uint16   FuelConsumption                                     # $1EB
+uint8   GPS                                     # Oil level, unit:%; accuracy 0.5; rangge:0~100; Offset:0
+uint8   B12V                                     # unit:V; accuracy 0.1; rangge:0~25; Offset:0
+uint8   B5V1                                     # unit:V; accuracy 0.05; rangge:0~12.5; Offset:0
+uint8   B7V4                                     # unit:V; accuracy 0.05; rangge:0~12.5; Offset:0
+uint8   VBAT                                     # unit:V; accuracy 0.02; rangge:0~5; Offset:0
+uint8   VREF                                     # unit:V; accuracy 0.02; rangge:0~5; Offset:0
+
+uint8   EmgST0                                     # Overlimit fault 0  $1EC
+uint8   EmgST1                                     # Overlimit fault 1
+uint8   ErrST0                                     # General fault status 0
+uint8   ErrST1                                     # General fault status 1
+uint8   ErrST2                                     # General fault status 2
+uint8   ErrST3                                     # General fault status 3
+
+uint8   AlmST0                                     # abnormal alarm 0  $1ED
+uint8   AlmST1                                     # abnormal alarm 1
+uint8   AlmST2                                     # abnormal alarm 2
+uint8   AlmST3                                     # abnormal alarm 3
+uint8   SysST0                                     # System status 0
+uint8   SysST1                                     # System status 1
+uint8   SysST2                                     # System status 2
+
+uint8   RxCounter                                     # CAN receive error counter  $1EF
+uint8   TxCounter                                     # CAN sending error counter
+uint8   BusError                                     # CAN bus error
+uint8   TxAccTime                                     # Accumulated time of unsuccessful message transmission
+uint8   RxCtrlAccTime                                     # Accumulated time of not receiving control messages
+uint8   RxCtrlAccCount                                     # Accumulated number of errors in receiving control messages
+uint8   RxMotorAccTime                                     # Accumulated time of not receiving motor message
+uint8   RxMotorAccCount                                     # Accumulated number of errors in receiving motor messages

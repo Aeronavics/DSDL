@@ -8,3 +8,5 @@ uint8   SPRAY_TANK_LEFT     = 2
 uint8   sensor_id               # Sensor ID
 
 float16 weight                  # Measured Weight
+float16 percent			# %
+
