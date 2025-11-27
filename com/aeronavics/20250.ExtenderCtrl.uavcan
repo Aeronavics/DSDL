@@ -1,0 +1,16 @@
+#
+# ExtenderCtrl - Range extender system controller command message
+# Sending node: Flight control controller
+# Message type ID: 20250 (0x4F1A)
+#
+#
+# Message release cycle (50ms)
+#
+uint16 BROADCASTING_EXTENDER_CTRL_PERIOD_MS = 50       # Sending cycle 50ms
+
+#
+# Message signal
+#
+uint8    ExtenderControlCmd                            # Range extender start stop control command. 0- stop, 1- start, effective value range: 0~1
+
+uint8    DroneStatus                                   # Current aircraft status. 0- On the ground (not flying), 1- In flight, effective value range: 0~1

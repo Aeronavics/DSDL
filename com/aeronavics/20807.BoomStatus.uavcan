@@ -1,0 +1,4 @@
+uint8 boom_id 				# ID of the boom
+uint8 connection_status		# Status of the boom lock
+float16 temperature			# Temperature of the LED board
+uint8 overtemp				# Operating status

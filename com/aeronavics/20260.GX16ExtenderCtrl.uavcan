@@ -1,0 +1,16 @@
+#
+#GX16ExtenderCtrl - Range extender system controller command message
+#Sending node: Flight control controller
+#Message type ID: 20250 (0x4F1A)
+#
+#
+#Message release cycle (50ms)
+#
+uint16 BROADCASTING_EXTENDER_CTRL_PERIOD_MS = 50       # Sending cycle 50ms
+
+#
+# Message signal
+#
+uint8    ClientCommand                            # Client command  0x12
+
+uint8    SysControl                                # System start stop: Off (0)/On (1)

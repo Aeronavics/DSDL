@@ -1,0 +1,7 @@
+#
+#   Spray controller control message
+#
+
+uint16 flow_rate   # ml/s   Target spray flow rate
+uint16 volume      # ml     Target volume
+uint16 pressure    # kpa    Target spray system pressure
